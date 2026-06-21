@@ -1,7 +1,7 @@
 ---
 services:
   db:
-    image: shaikmustafa/pyapp:db_image
+    image: saikumar1903/fyapp:db_image
     deploy:
       replicas: 1
     ports:
@@ -10,7 +10,7 @@ services:
       - mynetwork
 
   auth_service:
-    image: shaikmustafa/pyapp:auth_image
+    image: saikumar1903/fyapp:auth_image
     deploy:
       replicas: 1
     ports:
@@ -22,7 +22,7 @@ services:
     
 
   book_service:
-    image: shaikmustafa/pyapp:book_image
+    image: saikumar1903/fyapp:book_image
     deploy:
       replicas: 1
     ports:
@@ -32,7 +32,7 @@ services:
     depends_on:
       - db
   borrow_service:
-    image: shaikmustafa/pyapp:borrow_image
+    image: saikumar1903/fyapp:borrow_image
     deploy:
       replicas: 1
     ports:
@@ -43,7 +43,7 @@ services:
       - db
 
   frontend:
-    image: shaikmustafa/pyapp:frontend
+    image: saikumar1903/fyapp:frontend
     deploy:
       replicas: 1
     ports:
